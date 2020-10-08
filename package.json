@@ -6,9 +6,19 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "classnames": "^2.2.6",
+    "firebase": "^7.22.0",
+    "hamburger-react": "^2.2.0",
+    "leaflet": "^1.7.1",
     "react": "^16.13.1",
+    "react-content-zoom": "^1.0.3",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-flip-move": "^3.0.4",
+    "react-icons": "^3.11.0",
+    "react-image-magnify": "^2.7.4",
+    "react-leaflet": "^2.7.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",

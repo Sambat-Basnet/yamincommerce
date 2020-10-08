@@ -1,0 +1,146 @@
+.content {
+  max-width: 90vw;
+  width: 80vw;
+  /* background-color: red; */
+  min-height: max-content;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.upper {
+  height: 80vh;
+  width: 100%;
+}
+
+.upper > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.lower {
+  /* height: 50vh; */
+  min-height: max-content;
+  width: 100%;
+  /* background: white; */
+  display: flex;
+}
+
+.lower > div {
+  width: 50%;
+  min-height: 50vh;
+  max-width: 80vw;
+}
+
+.map {
+  padding-top: 30px;
+  margin-top: 2rem;
+  max-height: 70vh;
+  padding: 10px 0 10px 0;
+}
+
+/* sdfgsdfgrofdjgoifdjgjfiogjiojdfigjiodfg */
+.lowerContent {
+  margin-top: 2rem;
+}
+.lowerContent > form > .textPart {
+  max-width: 90%;
+}
+
+.lowerContent > form > .textPart > h1 {
+  font-weight: 600;
+  color: #1e205a;
+}
+.lowerContent > form > .textPart > p {
+  margin: 1rem 0;
+  line-height: 1.8;
+  color: #637282;
+  font-weight: 400;
+}
+.lowerContent > form > .textPart > h3 {
+  color: #637282;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.lowerContent > form > .firstSec {
+  margin-top: 2rem;
+  display: flex;
+
+  flex-direction: column;
+}
+
+::placeholder {
+  /* -webkit-text-security: none; */
+  color: rgb(172, 172, 172);
+  pointer-events: none !important;
+  font-family: "Poppins", sans-serif;
+}
+
+.lowerContent section {
+  max-width: 90%;
+  display: flex;
+}
+
+.lowerContent > form > .firstSec input {
+  height: 3.2rem;
+  flex: 1;
+  color: #697786;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  outline-color: rgba(155, 155, 155, 0.445);
+}
+
+.lowerContent > form > .firstSec > button {
+  font-size: 17px;
+  background-color: #1e205a;
+  color: white;
+  width: 7rem;
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: center;
+  /* margin: 2rem auto auto 1rem; */
+  font-family: "Poppins", sans-serif;
+  /* padding: 0.8rem 2.5rem; */
+  margin-top: 2rem;
+  padding: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.lowerContent > form > .firstSec > textarea {
+  margin-top: 1rem !important;
+  resize: vertical;
+  max-width: 85%;
+  padding: 1rem 0 0 1rem;
+  border: none;
+  color: #637282;
+  font-family: "Poppins", sans-serif;
+  outline-color: rgb(155, 155, 155, 0.445);
+}
+
+@media (max-width: 1000px) {
+  .lower {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lowerContent {
+    min-width: 90vw;
+    max-width: 90vw;
+    margin-bottom: 50px;
+  }
+
+  .lowerContent > form > .firstSec > textarea {
+    max-width: 80vw;
+  }
+}

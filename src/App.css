@@ -1,38 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 .App {
+  overflow-x: hidden;
+  background-color: rgb(243, 243, 243);
+  font-family: "Poppins", sans-serif;
+}
+
+/* styling for Navigation Bar */
+.navBar {
+  width: 100vw;
+  height: 93.6px;
+  min-height: max-content;
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: 400ms all ease-in-out;
+}
+.logo > img {
+  margin-top: 22px;
+  height: 105px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.navbar-blue {
+  background-color: #1d1e50;
+  color: white;
+  width: 100vw;
+  height: 93.6px;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.hamburger-react {
+  display: none;
+  margin-right: 35px;
+}
+
+.navbar-blue h1 {
+  color: white !important;
+}
+
+.navbar-blue .navItems {
+  color: white !important;
+}
+
+.logo {
+  margin-left: 10vw;
+  flex: 1;
+}
+
+.logo > h1 {
+  font-weight: 600;
+  color: #0e0f52;
+}
+
+.navItems {
+  margin-right: 100px;
+  flex: 0.6;
+  display: flex;
+  font-weight: 600;
+  color: #1d1e50;
+  justify-content: space-around;
+}
+
+.navItems > a {
+  width: max-content;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media screen and (max-width: 900px) {
+  .navItems a {
+    display: none;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .hamburger-react {
+    display: block;
+  }
+
+  .navbar-blue .navItems {
+    background-color: rgb(238, 238, 238);
+  }
+  .navbar-blue .navItems a {
+    color: #1d1e50;
+    font-weight: 400;
+    border-bottom: 1px solid #a0a0a0;
+  }
+  .navItems-open {
+    position: absolute;
+    right: 10%;
+    height: 40vh;
+    top: 11.5vh;
+    transition: 0.4s all ease;
+    /* border-radius: 5px; */
+    background-color: #1d1e50;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: flex;
+    /* background-color: rgb(255, 0, 0); */
+    flex-direction: column;
+    /* align-items: center; */
+    width: 65%;
+    padding: 10px 2rem;
+    transform: translateX(0%);
+    margin-right: 0;
+  }
+  .navItems-open > a {
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    width: 100%;
+    color: rgb(233, 233, 233);
+    padding: 1rem 0;
+    border-bottom: 1px solid #8282ac;
+  }
+  .navItems-open > a:nth-last-child(1) {
+    border: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* styling for BreadCrumb */
+.crumbArea {
+  padding-top: 90px;
+  max-width: 100%;
+  background-color: rgb(255, 255, 255);
+  min-height: max-content;
+  height: 114px;
+  max-height: 200px;
+  min-height: max-content;
+  font-family: "Poppins", sans-serif;
+  -webkit-box-shadow: -1px 13px 30px -7px rgba(192, 192, 192, 0.41);
+  -moz-box-shadow: -1px 13px 30px -7px rgba(212, 212, 212, 0.41);
+  box-shadow: -1px 13px 30px -7px rgba(214, 214, 214, 0.41);
+}
+
+.crumbArea > div {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 862px) {
+  .crumbArea > div {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: -1px;
+  }
+  .title > h2,
+  .location > h3 {
+    margin-left: 7vw;
+  }
+}
+
+.title > h2 {
+  font-weight: 500;
+  font-size: 22px;
+  color: #1e205a;
+  padding: 0 20px;
+  /* background-color: red; */
+}
+
+.location > h3 {
+  font-weight: 400;
+  font-size: 13px;
+  color: rgb(82, 82, 82);
+  padding: 0 20px;
+}
+
+/* styling for AboutMe */
+.AboutMe {
+  width: 100%;
+  margin: initial auto;
+}
+
+.main {
+  display: flex;
+  background-color: #f3f3f3;
+  width: 75%;
+  height: 90vh;
+  margin: 5rem auto;
+  min-height: fit-content;
+}
+
+.pic {
+  background: url("../src/assets/asian.jpg");
+  background-size: cover;
+  background-position: center;
+  flex: 1.05;
+  height: 100%;
+}
+
+.content {
+  /* background-color: wheat; */
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+  padding: 1.4rem 50px 1.3rem 3rem;
+  line-height: 1.8;
+}
+
+.content > h1 {
+  color: #1e205a;
+}
+
+.content > .intro {
+  margin-top: 1.3rem;
+  color: #637282;
+}
+
+.content > .quote {
+  border-left: 4px solid #1e205a;
+  margin-top: 1.3rem;
+  padding: 5px 14px;
+  color: #1e205a;
+}
+.content > .outro {
+  margin-top: 1.3rem;
+  color: #637282;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  margin: 0.6rem 0 0 -0.4rem;
+}
+
+.links > a {
+  margin: 0;
+  padding: 0;
+  color: #1e205a;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1185px) {
+  .main {
+    flex-direction: column;
+    height: fit-content;
+    justify-content: flex-start;
+    /* align-items: center; */
+    min-width: 93vw;
+  }
+  .pic {
+    min-height: 500px;
+  }
+
+  .content {
+    height: 500px;
+  }
+
+  .content > h1 {
+    margin-right: 17px;
+  }
+
+  .links {
+    width: 100px;
+    justify-content: space-between;
+  }
+}
+
+/* styling for Footer */
+
+.footSec {
+  height: fit-content;
+  min-width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+
+.mainFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25vh;
+  /* background-color: lightblue; */
+  min-height: fit-content;
+  width: 80vw;
+  margin: auto;
+  padding: 5rem 1rem 2rem 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .mainFoot {
+    display: block;
+    height: fit-content;
+  }
+
+  .mainFoot__item {
+    margin-bottom: 30px !important;
+  }
+}
+
+.mainFoot__item {
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  color: #1e205a;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  /* background-color: lawngreen; */
+}
+.mainFoot__item > ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+
+.mainFoot__item li {
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #5d5f86;
+}
+
+.contact > h4 {
+  color: #637282;
+  font-weight: 400;
+}
+
+/* styling for SingleBlog */
+
+.mainBlog {
+  /* background-color: red; */
+  margin-bottom: 40px;
+  height: fit-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.image {
+  width: 75%;
+  margin: 4rem auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.art {
+  width: 100%;
+}
+
+.blogContent {
+  width: 50%;
+  min-height: max-content;
+  background-color: white;
+  margin: -10rem auto 2rem auto;
+  padding: 84px;
+  border-radius: 8px;
+  -webkit-box-shadow: -1px 13px 30px -7px rgba(192, 192, 192, 0.41);
+  -moz-box-shadow: -1px 13px 30px -7px rgba(212, 212, 212, 0.41);
+  box-shadow: -1px 13px 30px -7px rgba(214, 214, 214, 0.41);
+}
+
+.blogDate,
+.blogDate > a {
+  color: #8c98a2;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.blogTitle {
+  color: #1e205a;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 1.3rem 0;
+}
+
+.blogPrime {
+  margin: 1.3rem 0;
+  color: #637282;
+}
+
+.blogQuote {
+  padding: 0 1.8rem;
+  color: #1e205a;
+  border-left: 4px solid #1e205a;
+}
+
+@media (max-width: 800px) {
+  .mainBlog {
+    margin: 3rem auto;
+    width: 90vw;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .blogContent {
+    margin: -0.5rem auto 1rem auto;
+    padding: 0rem;
+    border-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 100%;
+  }
+
+  .blogContent > div {
+    padding: 44px !important;
+  }
+
+  .art {
+    margin: 0 auto;
+    padding: 0;
+    min-width: 100%;
+  }
+
+  .image {
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
   }
 }
