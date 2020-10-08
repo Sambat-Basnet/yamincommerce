@@ -27,7 +27,7 @@ const Nav = () => {
           <a href="/">Home</a>
           <a href="/aboutme">About us</a>
           <a href="/">Blog</a>
-          <a href="/">Shop</a>
+          <a href="/products">Shop</a>
           <a href="/contact">Contact </a>
         </ul>
         <Hamburger
