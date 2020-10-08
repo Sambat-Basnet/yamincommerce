@@ -9,14 +9,15 @@
 }
 
 .upper {
-  height: 80vh;
+  height: fit-content;
   width: 100%;
 }
 
 .upper > img {
-  height: 100%;
+  height: auto;
   width: 100%;
-  object-fit: cover;
+  max-width: 90vw;
+  /* object-fit: cover; */
 }
 
 .lower {
@@ -114,6 +115,10 @@
   cursor: pointer;
   outline: none;
   border: none;
+}
+
+.lowerContent > form > .firstSec > button:hover {
+  background-color: #2e3191;
 }
 
 .lowerContent > form > .firstSec > textarea {
