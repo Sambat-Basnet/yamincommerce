@@ -143,4 +143,11 @@
   .lowerContent > form > .firstSec > textarea {
     max-width: 80vw;
   }
+  .lowerContent > form > .firstSec > section {
+    flex-direction: column;
+    height: 120px;
+  }
+  .lowerContent > form > .firstSec > section > input:nth-child(1) {
+    margin-bottom: 1rem;
+  }
 }
