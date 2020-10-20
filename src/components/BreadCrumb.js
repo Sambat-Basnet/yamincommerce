@@ -1,16 +1,19 @@
 import React from "react";
-import BreadCrumbData from "../constants/BreadCrumbData.json";
-const BreadCrumb = () => {
+const BreadCrumb = ({paths,header}) => {
   return (
     <div className="crumbArea">
       <div>
         <div className="title">
-          <h2>Products</h2>
+  <h2>{header ? header : paths[paths.length-1]}</h2>
         </div>
         <div className="location">
           <h3>
-            {BreadCrumbData.brand} > {BreadCrumbData.category} >{" "}
-            {BreadCrumbData.title}
+          {paths?.map(path=>{
+            return(
+              <>
+            {path}<span>{' '}>{' '}</span>
+            </>
+          )})}
           </h3>
         </div>
       </div>

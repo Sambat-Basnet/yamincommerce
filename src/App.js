@@ -13,12 +13,13 @@ import SingleBlog from "./pages/SingleBlog";
 import SingleProduct from "./pages/SingleProduct";
 import Contact from "./pages/Contact";
 import Store from "./pages/Store";
+import Home from './pages/Home'
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <BreadCrumb />
+      
+      
       <Router>
         <Switch>
           <Route exact path="/aboutme">
@@ -37,7 +38,7 @@ function App() {
             <Contact />
           </Route>
           <Route exact path="/">
-            <h1>HELLO HOME!!!</h1>
+            <Home/>
           </Route>
           <Route>
             <h1>NO PAGE EXISTS UNDER THE DOMAIN !!!</h1>

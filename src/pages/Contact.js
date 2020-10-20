@@ -2,11 +2,15 @@ import React from "react";
 import styles from "./contact.module.css";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import image from "../assets/walter.jpg";
+import BreadCrumb from '../components/BreadCrumb'
+import Nav from "../components/Nav";
 
 const Contact = () => {
   const position = [27.700005, 85.338427];
   return (
     <>
+    <Nav/>
+    <BreadCrumb paths={['Home','Contact']}/>
       <main className={styles.content}>
         <div className={styles.upper}>
           <img src={image} alt="my face" />

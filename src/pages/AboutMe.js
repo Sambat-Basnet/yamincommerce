@@ -2,9 +2,14 @@ import React from "react";
 import AboutMeJson from "../constants/AboutMe.json";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
+import BreadCrumb from "../components/BreadCrumb";
+import Nav from "../components/Nav";
 
 const AboutMe = () => {
   return (
+    <>
+    <Nav/>
+    <BreadCrumb paths={['Home','About me']}/>
     <div className="container">
       <div className="AboutMe">
         <div className="main">
@@ -34,6 +39,7 @@ const AboutMe = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

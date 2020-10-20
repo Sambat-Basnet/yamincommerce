@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import image from "../assets/art.jpg";
 import db from "../firebase";
 // importing components
-
+import BreadCrumb from '../components/BreadCrumb'
 import { useParams } from "react-router-dom";
+import Nav from "../components/Nav";
 
 const SingleBlog = () => {
   //for specific id, returns the particular id
@@ -33,6 +34,9 @@ const SingleBlog = () => {
       .catch((error) => console.warn(error.message));
   }, [id]);
   return (
+    <>
+    <Nav/>
+    <BreadCrumb paths={['Home','Blog']}/>
     <div className="primeBlog">
       {!blogData ? (
         <div
@@ -76,6 +80,7 @@ const SingleBlog = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

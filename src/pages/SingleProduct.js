@@ -5,6 +5,8 @@ import ProductShowCase from "../components/ProductShowCase";
 import { useParams } from "react-router-dom";
 import db from "../firebase";
 import ProductCard from "../components/ProductCard";
+import BreadCrumb from '../components/BreadCrumb'
+import Nav from "../components/Nav";
 
 const SingleProduct = () => {
   const [productData, setProductData] = useState(null);
@@ -57,6 +59,8 @@ const SingleProduct = () => {
 
   return (
     <>
+    <Nav/>
+    <BreadCrumb paths={['Home','Products',id]} header={'Products'}/>
       <ProductShowCase productData={productData} />
       <h1
         style={{

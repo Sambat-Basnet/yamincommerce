@@ -42,6 +42,10 @@
   z-index: 100;
 }
 
+.navbar-transparent {
+  background-color: transparent !important;
+}
+
 .hamburger-react {
   display: none;
   margin-right: 35px;
@@ -53,6 +57,10 @@
 
 .navbar-blue .navItems {
   color: white !important;
+}
+
+.navbar-transparent h1 {
+  color: #1d1e50 !important;
 }
 
 .logo {
@@ -158,6 +166,10 @@
   height: 100%;
   justify-content: space-between;
   align-items: center;
+}
+
+.location span:last-child {
+  display: none;
 }
 
 @media screen and (max-width: 862px) {

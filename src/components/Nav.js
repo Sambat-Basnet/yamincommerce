@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Hamburger from "hamburger-react";
 
-const Nav = () => {
+const Nav = ({transparent}) => {
   const [show, setShow] = useState(false);
   const [isOpen, setOpen] = useState(false);
   useEffect(() => {
@@ -18,15 +18,15 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav>
-      <div className={` ${show ? "navbar-blue" : "navBar"}`}>
+    <nav >
+      <div className={`navBar ${transparent ? "navbar-transparent": show ? "navbar-blue" : "navBar"}`}>
         <div className="logo">
-          <img src={!show ? "/blueLogo.png" : "whiteLogo.png"} alt="logo" />
+          <img src={transparent ? "/blueLogo.png" : !show ? "/blueLogo.png" : "/whiteLogo.png"} alt="logo" />
         </div>
         <ul className={` ${isOpen ? "navItems navItems-open" : "navItems"}`}>
           <a href="/">Home</a>
           <a href="/aboutme">About us</a>
-          <a href="/">Blog</a>
+          <a href="/blog/7aKM1fSZhPyc8trVEx5v">Blog</a>
           <a href="/products">Shop</a>
           <a href="/contact">Contact </a>
         </ul>
@@ -34,7 +34,7 @@ const Nav = () => {
           size={"26"}
           toggled={isOpen}
           toggle={setOpen}
-          color={` ${show ? "white" : "#1d1e50"}`}
+          color={`${transparent ? "#1d1e50": show ? "white" : "#1d1e50"}`}
           onClick={() => setOpen((isOpen) => !isOpen)}
           rounded
         />

@@ -1,0 +1,26 @@
+.mainHome {
+  height: 120vh;
+  background: url("../assets/landing.jpg");
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+
+.viewSec {
+  position: absolute;
+  right: 20%;
+  top: 55%;
+  cursor: pointer;
+}
+
+.viewSec a {
+  color: inherit;
+  transition: 0.3s color ease-in-out;
+}
+.viewSec a:hover {
+  color: rgb(0, 69, 148);
+}
+
+.arrIcon {
+  font-size: 70px;
+}

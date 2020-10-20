@@ -3,6 +3,8 @@ import ProductCard from "../components/ProductCard";
 import styles from "./store.module.css";
 import db from "../firebase";
 import FlipMove from "react-flip-move";
+import BreadCrumb from '../components/BreadCrumb'
+import Nav from "../components/Nav";
 
 const Store = () => {
   const [products, setProducts] = useState(null);
@@ -49,6 +51,9 @@ const Store = () => {
   ];
 
   return (
+    <>
+    <Nav/>
+    <BreadCrumb paths={['Home','Products']}/>
     <div className={styles.store}>
       {/* SIDEBAR */}
       <div className={styles.sidebar}>
@@ -78,6 +83,7 @@ const Store = () => {
         </FlipMove>
       </div>
     </div>
+    </>
   );
 };
 
